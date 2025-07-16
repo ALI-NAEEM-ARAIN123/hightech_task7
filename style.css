@@ -78,6 +78,13 @@ body.dark-mode .card {
 body.dark-mode .timeline::before {
   background: #343a40;
 }
+body.dark-mode .navbar-brand,
+body.dark-mode .nav-link {
+  color: #fff !important;
+}
+body.dark-mode .nav-link.active {
+  color: #ede9fe !important;
+}
 
 /* Section Transitions */
 section {
@@ -231,4 +238,91 @@ body.dark-mode .coding-snippet {
   background: #2a1840;
   color: #ede9fe;
   box-shadow: 0 2px 24px #7c3aed66;
+} 
+
+/* Responsive Spacing and Layout Improvements */
+.container, .container-fluid {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media (max-width: 991.98px) {
+  .navbar .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-nav {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-section, .company-info-section, .timeline, .team-section, .coding-snippet {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .timeline {
+    max-width: 100%;
+    padding: 1rem 0;
+  }
+  .timeline-item {
+    padding: 1rem 1rem;
+  }
+  .coding-snippet {
+    margin: 1rem 0;
+    padding: 0.75rem 0.5rem;
+    font-size: 0.95rem;
+  }
+  .card {
+    margin-bottom: 1.5rem;
+  }
+  .row.g-4 {
+    --bs-gutter-x: 1rem;
+    --bs-gutter-y: 1.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  h1, .display-4 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+  .timeline-item {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.95rem;
+  }
+  .card .card-title {
+    font-size: 1.1rem;
+  }
+  .card .card-text {
+    font-size: 0.95rem;
+  }
+}
+
+/* Ensure footer is always readable and spaced */
+footer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 1rem;
+}
+
+/* Fix Back to Top button on mobile */
+@media (max-width: 575.98px) {
+  #backToTop {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+    bottom: 16px;
+    right: 16px;
+  }
 } 
